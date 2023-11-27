@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TableController;
+use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -31,6 +32,8 @@ Route::group(['middleware'=>'auth:sanctum'], function () {
     
     Route::post('/logout', [AuthController::class, 'logout']);
 });
+
+Route::post('/upload', [UploadController::class, 'upload']);
 
  
 
